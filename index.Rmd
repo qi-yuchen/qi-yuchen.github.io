@@ -13,5 +13,5 @@ output:
 
 # add links
 
-use [google](google.com)
+use [google](https://www.google.com)
 
