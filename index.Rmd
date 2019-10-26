@@ -9,7 +9,7 @@ output:
 
 ### This is my webpage
 
-You can find my academic and professional experience here along with other information.
+Hi I am Qi Yuchen. You can find my academic and professional experience here along with other information.
 
 Here is my [resume](resume.html).
 
