@@ -1,17 +1,26 @@
 ---
-title: "My awesome website"
+title: "Yuchen's website"
 output: 
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-# test
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+### This is my webpage
 
-# add links
+You can find my academic and professional experience here along with other information.
 
-use [google](https://www.google.com)
+Here is my [resume](resume.html).
 
+
+### My cat
+
+I have a cat back home. His name is Qiu and he always seeks to claim my bed.
+
+<img src="images/Qiu_2.jpg" style="width:50%">
+
+
+He is proud of this I guess.
+
+<img src="images/Qiu_1.jpg" style="width:50%">

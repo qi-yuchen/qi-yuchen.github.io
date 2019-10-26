@@ -1,0 +1,38 @@
+---
+title: "Resume"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## Education
+
+### Columbia University
+
+_Graduate Student_ 2019-2021
+
+Program: Biostatistics
+
+Track: Theory and Method
+
+### The Chinese University of Hong Kong
+
+_Undergraduate Student_ 2014-2018
+
+Major: Mathematics | Minor: Statistics
+
+Stream: Computational and Applied Mathematics
+
+
+## Research
+
+### Proper Orthogonal Decomposition
+
+* Studied the model reduction technique Proper Orthogonal Decomposition and deriving low-dimensional models for evolution problems by this method
+* Performed the numerical experiment: POD for the heat equation
+
+### Edge Detection
+
+* Made labels for image data sets from the Berkeley Segmentation Dataset and Benchmark
+* Explored deep learning and convolutional neutral networks, then worked on edge detection with fully convolutional networks
