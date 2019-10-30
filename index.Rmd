@@ -13,6 +13,8 @@ Hi I am Qi Yuchen. You can find my academic and professional experience here alo
 
 Here is my [resume](resume.html).
 
+Here is a [flexdashboard](flexdashboard.html) for a sample from NY NOAA.
+
 
 ### My cat
 

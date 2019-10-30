@@ -1,0 +1,69 @@
+---
+title: "flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+
+```
+
+```{r}
+data("ny_noaa")
+
+weather_df = ny_noaa %>% 
+  mutate(
+    station = recode(id, USW00094728 = "CentralPark_NY", 
+                      USC00309055 = "Wellesley_NY",
+                      USW00014768 = "Rochester_NY")
+    ) %>%
+  filter(station %in% c("CentralPark_NY", "Wellesley_NY", "Rochester_NY")) %>% 
+  select(station, id, everything()) %>% 
+  mutate(
+    tmax = as.integer(tmax),
+    tmin = as.integer(tmin)
+         ) %>% 
+  drop_na() %>% 
+  sample_n(2000)
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Distribution of the minimum and maximum temperature
+
+```{r}
+weather_df %>% 
+  plot_ly(x = ~tmin, y = ~tmax, type = "scatter", mode = "markers",
+          color = ~station, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Distribution of the maximum temperature in each station
+
+```{r}
+weather_df %>% 
+  select(station, tmax) %>% 
+  mutate(station = fct_reorder(station, tmax)) %>% 
+  plot_ly(y = ~tmax, color = ~station, type = "box", colors = "Set2")
+```
+
+### Sample size in each station
+
+```{r}
+weather_df %>% 
+  count(station) %>% 
+  mutate(station = fct_reorder(station, n)) %>% 
+  plot_ly(x = ~station, y = ~n, color = ~station, type = "bar")
+```
+
